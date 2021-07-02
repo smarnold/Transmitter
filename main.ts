@@ -16,6 +16,8 @@ basic.forever(function () {
         rightMotorSpeed = Math.map(right, -90, 90, -100, 100)
         radio.sendValue("LMotor", leftMotorSpeed)
         radio.sendValue("RMotor", rightMotorSpeed)
+    } else if (input.buttonIsPressed(Button.B)) {
+        radio.sendString("Obstacle")
     } else {
         radio.sendValue("Stop", 0)
     }
