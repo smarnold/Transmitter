@@ -18,9 +18,11 @@ basic.forever(function () {
         radio.sendValue("RMotor", rightMotorSpeed)
         basic.showString("A")
     } else if (input.buttonIsPressed(Button.B)) {
-        radio.sendString("Obstacle")
-        basic.showString("B")
+        let Obstacle = ""
+        radio.sendValue(Obstacle, 1)
+        basic.showString("O")
     } else {
         radio.sendValue("Stop", 0)
+        basic.showString("T")
     }
 })
