@@ -4,12 +4,12 @@ let right = 0
 let left = 0
 let roll = 0
 let pitch = 0
-basic.showString("T")
 radio.setGroup(1)
+basic.showString("T")
 basic.forever(function () {
-    pitch = 0 - input.rotation(Rotation.Pitch)
-    roll = input.rotation(Rotation.Roll)
     if (input.buttonIsPressed(Button.A)) {
+        pitch = 0 - input.rotation(Rotation.Pitch)
+        roll = input.rotation(Rotation.Roll)
         left = pitch + roll
         right = pitch - roll
         leftMotorSpeed = Math.map(left, -90, 90, -100, 100)
@@ -18,8 +18,7 @@ basic.forever(function () {
         radio.sendValue("RMotor", rightMotorSpeed)
         basic.showString("A")
     } else if (input.buttonIsPressed(Button.B)) {
-        let Obstacle = 0
-        radio.sendValue("Obstacle", Obstacle)
+        radio.sendValue("Obstacle", 1)
         basic.showString("O")
     } else {
         radio.sendValue("Stop", 0)
