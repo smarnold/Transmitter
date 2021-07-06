@@ -22,7 +22,7 @@ basic.forever(function () {
         basic.showString("O")
     } else if (input.buttonIsPressed(Button.AB)) {
         radio.sendValue("Police", 1)
-        basic.showString("F")
+        basic.showString("P")
     } else {
         radio.sendValue("Stop", 0)
         basic.showString("T")
