@@ -20,6 +20,9 @@ basic.forever(function () {
     } else if (input.buttonIsPressed(Button.B)) {
         radio.sendValue("Obstacle", 1)
         basic.showString("O")
+    } else if (input.buttonIsPressed(Button.AB)) {
+        radio.sendValue("Follow", 1)
+        basic.showString("F")
     } else {
         radio.sendValue("Stop", 0)
         basic.showString("T")
