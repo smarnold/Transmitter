@@ -21,7 +21,7 @@ basic.forever(function () {
         radio.sendValue("Obstacle", 1)
         basic.showString("O")
     } else if (input.buttonIsPressed(Button.AB)) {
-        radio.sendValue("Follow", 1)
+        radio.sendValue("Police", 1)
         basic.showString("F")
     } else {
         radio.sendValue("Stop", 0)
